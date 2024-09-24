@@ -35,7 +35,7 @@ public class TitleScreen extends World
      */
     private void prepare()
     {
-        Elephant elephant = new Elephant();
+        Bear bear = new Bear();
         addObject(elephant,100,200);
         elephant.setLocation(494, 120);
         Label label = new Label("Use \u2190 and \u2192 to Move", 40);
@@ -50,6 +50,6 @@ public class TitleScreen extends World
         label.setLocation(300,261);
         label2.setLocation(190,318);
         label2.setLocation(300,319);
-        elephant.setLocation(300,190);
+        bear.setLocation(300,190);
     }
 }
