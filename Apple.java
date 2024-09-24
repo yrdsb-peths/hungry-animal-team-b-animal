@@ -1,12 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
+ * Write a description of class Apple here.
  * 
- * 
- * @author 
- * @version
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Strawberry extends Food
+public class Apple extends Food
 {
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
