@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class TitleScreen extends World
 {
-    Label titleLabel = new Label("The Elephant", 60);
+    Label titleLabel = new Label("The Bear", 60);
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -36,8 +36,8 @@ public class TitleScreen extends World
     private void prepare()
     {
         Bear bear = new Bear();
-        addObject(elephant,100,200);
-        elephant.setLocation(494, 120);
+        addObject(bear,100,200);
+        bear.setLocation(494, 120);
         Label label = new Label("Use \u2190 and \u2192 to Move", 40);
         addObject(label,220,257);
         label.setLocation(297, 243);
