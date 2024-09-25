@@ -16,4 +16,9 @@ public class Food extends Actor
     {
         // Add your action code here.
     }
+    
+    public void move() {
+        
+    }
+
 }
