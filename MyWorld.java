@@ -10,6 +10,7 @@ public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
+    Food food;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -23,7 +24,7 @@ public class MyWorld extends World
         scoreLabel = new Label(0,80);
         addObject(scoreLabel, 30, 35);
         
-        createStrawberry();
+        createFood();
     }
     
     /**
@@ -36,7 +37,7 @@ public class MyWorld extends World
     }
     
     /**
-     * Creating a new apple in a different space each time.
+     * Creating a new Strawberry and Apple in a different space each time.
      */
     public void createStrawberry()
     {
@@ -45,7 +46,27 @@ public class MyWorld extends World
         int y = 0;
         addObject(strawberry, x, y);
     }
-    
+    public void createApple()
+    {
+        Apple apple = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(apple, x, y);
+    }
+    public void createFood()
+    {
+        int rand = Greenfoot.getRandomNumber(2);
+        if(rand == 0)
+        {
+            food = new Apple();
+        }
+        else
+        {
+            food = new Strawberry();
+        }
+        int x = Greenfoot.getRandomNumber(600);
+        addObject(food, x, 0);
+    }
     /**
      * End the game and have a 'Game Over' label.
      */
