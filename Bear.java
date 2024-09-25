@@ -12,6 +12,7 @@ public class Bear extends Actor
     
     // Direction the elephant is facing
     String facing = "right";
+    SimpleTimer animationTimer = new SimpleTimer();
 
     /**
      * Constructor - The code that gets run one time when object is created
@@ -26,12 +27,39 @@ public class Bear extends Actor
         
         for(int i = 0; i < idleLeft.length; i++)
         {
-            idleLeft[i] = new GreenfootImage("images/elephant_idle/idle" + i + ".png");
+            idleLeft[i] = new GreenfootImage("images/bear_idle/idle" + i + ".png");
             idleLeft[i].mirrorHorizontally();
             idleLeft[i].scale(100, 100);            
         }
         
+        animationTimer.mark();
+        
+        // Initial bear image
         setImage(idleRight[0]);
+    }
+    
+    /**
+     * Animate the bear
+     */
+    int imageIndex = 0;
+    public void animateBear()
+    {
+        if(animationTimer.millisElapsed() < 100)
+        {
+            return;
+        }
+        animationTimer.mark();
+        
+        if(facing.equals("right"))
+        {
+            setImage(idleRight[imageIndex]);
+            imageIndex = (imageIndex + 1) % idleRight.length;
+        }
+        else
+        {
+            setImage(idleLeft[imageIndex]);
+            imageIndex = (imageIndex + 1) % idleLeft.length;
+        }
     }
     
     public void act()
@@ -47,8 +75,11 @@ public class Bear extends Actor
             facing = "right";
         }
         
-        //Remove apple if bear eats it
+        // Remove apple if bear eats it
         eatFood();
+        
+        // Animate the bear
+        animateBear();
     }
     /**
      * Eats the apple and then spawns a new apple.
