@@ -12,6 +12,12 @@ public class Strawberry extends Food
      * Act - do whatever the Apple wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    public Strawberry()
+    {
+        super(5);
+    }
+    
     public void act()
     {
         move();
