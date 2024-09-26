@@ -18,7 +18,7 @@ public class MyWorld extends World
         
         //Create the Seal object
         Bear bear = new Bear();
-        addObject(bear, 300, 200);
+        addObject(bear, 300, 300);
         
         //Create a label
         scoreLabel = new Label(0,80);
@@ -36,23 +36,7 @@ public class MyWorld extends World
         scoreLabel.setValue(score);
     }
     
-    /**
-     * Creating a new Strawberry and Apple in a different space each time.
-     */
-    public void createStrawberry()
-    {
-        Strawberry strawberry = new Strawberry();
-        int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
-        addObject(strawberry, x, y);
-    }
-    public void createApple()
-    {
-        Apple apple = new Apple();
-        int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
-        addObject(apple, x, y);
-    }
+    
     public void createFood()
     {
         int rand = Greenfoot.getRandomNumber(2);
