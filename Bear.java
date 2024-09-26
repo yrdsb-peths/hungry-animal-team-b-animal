@@ -96,5 +96,13 @@ public void act()
             world.increaseScore();
             eatingSound.play();
         }
+        if(isTouching(Apple.class))
+        {
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld)getWorld();
+            world.createApple();
+            world.increaseScore();
+            eatingSound.play();
+        }
     }
 }
