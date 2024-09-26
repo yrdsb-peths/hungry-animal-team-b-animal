@@ -18,7 +18,7 @@ public class MyWorld extends World
         
         //Create the Seal object
         Bear bear = new Bear();
-        addObject(bear, 300, 200);
+        addObject(bear, 300, 300);
         
         //Create a label
         scoreLabel = new Label(0,80);
