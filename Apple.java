@@ -33,7 +33,7 @@ public class Apple extends Food
     
     public void move() {
         int x = getX();
-        int y = getY() + 1;
+        int y = getY() + 2;
         setLocation(x, y);
     }
 }

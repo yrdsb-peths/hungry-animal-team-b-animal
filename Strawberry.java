@@ -31,7 +31,7 @@ public class Strawberry extends Food
     }
     public void move() {
         int x = getX();
-        int y = getY() + 2;
+        int y = getY() + 3;
         setLocation(x, y);        
     }
 }
