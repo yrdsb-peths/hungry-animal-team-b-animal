@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author 
  * @version
  */
-public class Strawberry extends Food
+public class Strawberry extends Food 
 {
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
