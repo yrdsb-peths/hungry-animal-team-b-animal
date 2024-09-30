@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Apple extends Food
+public class Apple extends Food 
 {
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
@@ -17,6 +17,7 @@ public class Apple extends Food
     {
         super(1);
     }
+    
     
     public void act()
     {

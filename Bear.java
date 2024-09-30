@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author 
  * @version
  */
-public class Bear extends Actor
+public class Bear extends Actor implements Destructable
 {
 GreenfootSound eatingSound = new GreenfootSound("eating-sound-effect-36186.mp3");
 GreenfootImage[] idleRight = new GreenfootImage[4];
@@ -15,9 +15,7 @@ GreenfootImage[] idleLeft = new GreenfootImage[4];
 String facing = "right";
 SimpleTimer animationTimer = new SimpleTimer();
 
-/**
- * Constructor - The code that gets run one time when object is created
- */
+
 public Bear()
 {
     for(int i = 0; i < idleRight.length; i++)
@@ -77,18 +75,13 @@ public void act()
         }
         
         // Remove apple if bear eats it
-        eatFood();
+        destruct();
         
         // Animate the bear
         animateBear();
     }
-    
-    /**
-     * Eats the apple and then spawns a new apple.
-     */
-    public void eatFood()
-    {
-        if(isTouching(Food.class))
+    public void destruct() {
+    if(isTouching(Food.class))
         {
             removeTouching(Food.class);
             MyWorld world = (MyWorld)getWorld();
@@ -97,4 +90,5 @@ public void act()
             eatingSound.play();
         }
     }
+    
 }
