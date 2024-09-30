@@ -88,12 +88,20 @@ public void act()
      */
     public void eatFood()
     {
-        if(isTouching(Food.class))
+        if(isTouching(Apple.class))
         {
             removeTouching(Food.class);
             MyWorld world = (MyWorld)getWorld();
             world.createFood();
-            world.increaseScore();
+            world.increaseAppleScore();
+            eatingSound.play();
+        }
+        if(isTouching(Strawberry.class))
+        {
+            removeTouching(Food.class);
+            MyWorld world = (MyWorld)getWorld();
+            world.createFood();
+            world.increaseStrawberryScore();
             eatingSound.play();
         }
     }

@@ -51,5 +51,8 @@ public class TitleScreen extends World
         label2.setLocation(190,318);
         label2.setLocation(300,319);
         bear.setLocation(300,190);
+        Label label3 = new Label("Apples give you 1 point, Strawberries give you 3 points!", 20);
+        addObject(label3,249,331);
+        label3.setLocation(305, 375);
     }
 }

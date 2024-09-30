@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author 
  * @version
  */
-public class Strawberry extends Food
+public class Strawberry extends Food 
 {
     /**
      * Act - do whatever the Apple wants to do. This method is called whenever
@@ -31,7 +31,7 @@ public class Strawberry extends Food
     }
     public void move() {
         int x = getX();
-        int y = getY() + 2;
+        int y = getY() + 3;
         setLocation(x, y);        
     }
 }

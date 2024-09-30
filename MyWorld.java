@@ -30,9 +30,14 @@ public class MyWorld extends World
     /**
      * Increase the score
      */
-    public void increaseScore()
+    public void increaseAppleScore()
     {
         score++;
+        scoreLabel.setValue(score);
+    }
+    public void increaseStrawberryScore()
+    {
+        score += 3;
         scoreLabel.setValue(score);
     }
     
