@@ -81,14 +81,14 @@ public void act()
         animateBear();
     }
     public void destruct() {
-    if(isTouching(Food.class))
-        {
-            removeTouching(Food.class);
-            MyWorld world = (MyWorld)getWorld();
-            world.createFood();
-            world.increaseScore();
-            eatingSound.play();
-        }
+        if(isTouching(Food.class))
+            {
+                removeTouching(Food.class);
+                MyWorld world = (MyWorld)getWorld();
+                world.createFood();
+                world.increaseScore();
+                eatingSound.play();
+            }
     }
     
 }
